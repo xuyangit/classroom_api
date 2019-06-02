@@ -270,10 +270,18 @@ Repo name is used instead of assignment name. We need the repo name so that we c
 ```json
 {
 	"repoFullName": "private-cr-test/firsthw",
-	"code":
+	"codes":
 	{
-		"10001": "import os\nprint('here2')",
-		"20003": "import os\nprint('here3')"
+		"10001": 
+		{
+			"language": "C",
+			"code": "import os\nprint('here2')"
+		},
+		"20003":
+		{
+			"language": "C",
+			"code": "import os\nprint('here3')"
+		}
 	}
 }
 ```
