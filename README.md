@@ -303,3 +303,5 @@ If error is empty, the submit is successfully submitted but need to run for a wh
 }
 ```
 </details>
+
+As we have discussed, we can reuse the http://ide.joyoj.org/compile site for local debugging. Currently, three htmls are needed: (1) Login.html (2) Register.html (3) Assignments.html (just like http://ide.joyoj.org/#/). 
