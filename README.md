@@ -85,7 +85,45 @@ Error field is empty.
 </details>
 
 <details>
-  <summary>Login Api</summary>
+  <summary>Register</summary>
+  Used to register new user.
+
+**URL** : `/register`
+
+**Method** : `POST` or `GET` (`GET` request will return the static html for registration.)
+
+**Data constraints**
+
+| Form key | Data type |
+|----------|-----------|
+| userid   | string    |
+| password | string    |
+| name | string |
+
+
+
+## Success Response
+Error field is empty. Should redirect to the /$(redirect) page.
+
+```json
+{
+    "err": "",
+    "redirect": "login"
+}
+```
+
+## Error Response
+
+**Condition** : If user name has been used.
+
+**Content** :
+
+```json
+{
+    "err": "USERNAME_ALREADY_EXIST"
+    "redirect": ""
+}
+```
 
 </details>
 
