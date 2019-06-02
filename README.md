@@ -153,6 +153,52 @@ No data needed. Get user information from the token in cookies.
 </details>
 
 <details>
-  <summary>Login Api</summary>
+  <summary>Get assignments</summary>
 
+Used to get assignments for user.
+
+**URL** : `/assignments`
+
+**Method** : `GET`
+
+**Data constraints**
+
+No data needed. Get user information from the token in cookies.
+
+
+
+## Success Response
+The data field contains a series of assignments. The problem id is used to get problem from the server by /problem?problemId=xxxxx.
+
+```json
+{
+	"data":
+    {
+    	"AssignmentNameX":
+        {
+       		"problemIds": ["10001","20003"],
+            "repoFullName":"private-cr-test/firsthw"
+        },
+        "AssignmentNameY":
+        {
+        	"problemIds": ["10003"]
+            "repoFullName": "xxxx/xxxxx"
+        }
+    },
+    "err": ""
+}
+```
+
+## Error Response
+
+**Condition** : If no assignments found.
+
+**Content** :
+
+```json
+{
+    "err": "NotFound"
+    "data": {}
+}
+```
 </details>
