@@ -128,8 +128,28 @@ Error field is empty. Should redirect to the /$(redirect) page.
 </details>
 
 <details>
-  <summary>Login Api</summary>
+  <summary>Logout</summary>
+Used to logout.
 
+**URL** : `/logout`
+
+**Method** : `POST`
+
+**Data constraints**
+
+No data needed. Get user information from the token in cookies.
+
+
+
+## Success Response
+
+
+```json
+{
+    "logout": True,
+    "redirect": "login"
+}
+```
 </details>
 
 <details>
